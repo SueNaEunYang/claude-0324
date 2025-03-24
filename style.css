@@ -43,7 +43,7 @@ body {
     background-color: green;
     position: absolute;
     bottom: 0;
-    right: 0;
+    right: -20px;
     animation: cactusMove 1.5s infinite linear;
 }
 
