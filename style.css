@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7f7f7;
+}
+
+.container {
+    position: relative;
+    width: 600px;
+    height: 200px;
+}
+
+#game {
+    width: 600px;
+    height: 200px;
+    border-bottom: 1px solid #000;
+    position: relative;
+    overflow: hidden;
+}
+
+#dino {
+    width: 50px;
+    height: 50px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M40,60 L40,80 L30,80 L30,70 L20,70 L20,80 L10,80 L10,60 L0,60 L0,40 L10,40 L10,50 L70,50 L70,40 L80,40 L80,30 L90,30 L90,40 L80,40 L80,50 L90,50 L90,60 Z" fill="%23535353"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+}
+
+#cactus {
+    width: 20px;
+    height: 40px;
+    background-color: green;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    animation: cactusMove 1.5s infinite linear;
+}
+
+@keyframes cactusMove {
+    0% {
+        right: -20px;
+    }
+    100% {
+        right: 100%;
+    }
+}
+
+.jump {
+    animation: jump 0.5s;
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+    50% {
+        bottom: 100px;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+#score {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-family: monospace;
+    font-size: 20px;
+}
